@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { Button } from "@/components/Button";
@@ -19,11 +20,15 @@ export function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-line bg-surface">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-6 py-4">
-        <Link
-          href="/"
-          className="link-motion min-w-0 text-base font-semibold leading-snug text-ink hover:text-link sm:text-lg"
-        >
-          Rosalie Frazier Pazant Foundation
+        <Link href="/" className="min-w-0 shrink-0">
+          <Image
+            src="/rfp-foundation-logo.webp"
+            alt="Rosalie Frazier Pazant Foundation"
+            width={1056}
+            height={701}
+            priority
+            className="h-16 w-auto sm:h-20"
+          />
         </Link>
 
         <nav className="hidden items-center gap-8 lg:flex" aria-label="Main">
